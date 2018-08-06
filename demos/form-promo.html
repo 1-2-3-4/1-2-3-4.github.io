@@ -1,20 +1,68 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1"><title>
-	Promo - HTML
+	Promo - Mac.com
 </title>
-<?php require '_form-header.php'; ?>
+<!-- link to Google Fonts -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro|Cutive+Mono" rel="stylesheet" type="text/css" />
+<!-- Fancybox Styles (goes before main so main can override defaults) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen" />
+<!-- link to main stylesheet -->
+<link rel="stylesheet" href="css/form-gen.css" type="text/css" />
+<!-- link to font awesome icon set -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- link to jquery (same as in original source) -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- Add Fancybox JS-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
 </head>
 <body>
-    <?php require '_form-nav.php'; ?>
+   <nav>  
+        <a class="collapse-toggle" href=""><i class="fa fa-caret-square-o-left"></i><i class="fa fa-caret-square-o-right display-none"></i></a>
+        <h1>Macmillan<br>Digital<br>Marketing<br>Group</h1>
+
+        <ul class="primary-nav">
+            <!-- <li>
+                <a href="#">Google Analytics URL Builder</a>
+            </li>
+            <li>
+                <a class="nav-toggle" href="#"><i class="fa fa-caret-down caret display-none"></i><i class="fa fa-caret-right caret"></i>Google Analytics Event Tracking</a>
+                <ul class="secondary-nav display-none">
+                    <li><a href="#">Universal Tracking (new)</a></li>
+                    <li><a href="#">Standard Tracking (old)</a></li>
+                </ul>
+            </li> -->
+            <li>
+                <a class="nav-toggle" href="form-homepg.html"><i class="fa fa-caret-down display-none caret"></i><i class="fa fa-caret-right caret"></i>Form Generator Tool</a>
+                <ul class="secondary-nav display-none">
+                    <li><a href="form-html.html">HTML Email Opt-In</a></li>
+                    <li><a href="form-fb.html">Facebook</a></li>
+                    <li>
+                        <a class="nav-toggle nav-disabled" href="#"><i class="fa fa-caret-down caret display-none"></i><i class="fa fa-caret-right caret"></i>Promo</a>
+                        <ul class="tertiary-nav display-none">
+                            <li><a href="form-promo.html">Mac.com</a></li>
+                            <li><a href="form-upload.html">Upload</a></li>
+                            <li><a href="form-promo-html.html">HTML</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="form-lookup.html">Form Lookup</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
 
     <form name="form1" method="post" action="#" id="form1">
     <div>
-    
     <a id="top"></a>
     <div class="main">
     <h2>Promo -
-        <span id="lblHeading">HTML</span></h2>
+        <span id="lblHeading">Mac.com</span></h2>
     <!--<a href="Default.aspx">Main Menu</a>-->
     <h3><span class="number">1.</span>Select a Campaign Name and Form Name</h3>
         <section>
@@ -278,7 +326,8 @@
     <section>      
         <span class="question">Author Alerts</span>
         <div class="alerts-list-container clear-after">
-            <select size="10" name="lbxAuthors" id="lbxAuthors">
+
+                        <select size="10" name="lbxAuthors" id="lbxAuthors">
                             <option value="Adam Christopher Author Alert">Adam Christopher Author Alert</option>
                             <option value="Alan Weisman author alert">Alan Weisman author alert</option>
                             <option value="Alden Bell author alerts">Alden Bell author alerts</option>
@@ -448,7 +497,7 @@
                 <span class="question">Prize Approx. Retail Value (numbers only)</span>
             </div>
             <div class="half-width">
-                <input name="ucPrizesCtl$txtNumberOfWinners" type="text" maxlength="4" id="ucPrizesCtl_txtNumberOfWinners" placeholder="ex. 5" />
+                <input name="ucPrizesCtl$txtNumberOfWinners" type="text" maxlength="4" id="ucPrizesCtl_txtNumberOfWinners" placeholder="ex. 5"/>
                 <span class="question">Number of Prize Winners allowed</span>
             </div>
             <div class="btn-container-formname float-right">
@@ -534,18 +583,7 @@
             </table>
         </div>
     </section>
-    <h3><span class="number">9.</span>Form Details</h3>
-    <section>
-        <div class="full-width">
-            <input name="txtHostingURL" type="text" maxlength="250" id="txtHostingURL" placeholder="ex. http://www.SwoonReads.com/sweepstakes">
-            <span class="question">*I am hosting the sweepstakes at this URL</span>
-        </div>
-        <div class="full-width">
-            <input name="txtSubmitButtonText" type="text" maxlength="15" id="txtSubmitButtonText" placeholder="ex. Subscribe">
-            <span class="question">*What do you want the submit button to read?</span>
-        </div>
-    </section>
-    <h3><span class="number">10.</span>Contact Information</h3>
+    <h3><span class="number">9.</span>Contact Information</h3>
     <section>
         <div class="full-width">
             <input name="txtSponsor" type="text" maxlength="100" id="txtSponsor" placeholder="ex. St. Martin's Press" />
@@ -557,13 +595,13 @@
         </div>
         <input type="submit" name="btnGenerate" value="Generate" id="btnGenerate" />
         <div class="bottom-links">
-            <a href="form-promo-html.php">Clear page</a>
+            <a href="form-promo.html">Clear page</a>
             <a href="#top">Go to the top</a>
         </div> 
     </section>
     </div>
     
 </form>
-<?php require '_form-footer.php'; ?>
+<?php require '_form-footer.html'; ?>
 </body>
 </html>

@@ -3,10 +3,59 @@
 <head id="Head1"><title>
 	Form Generator Tool
 </title>
-<?php require '_form-header.php'; ?>
+<!-- link to Google Fonts -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro|Cutive+Mono" rel="stylesheet" type="text/css" />
+<!-- Fancybox Styles (goes before main so main can override defaults) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen" />
+<!-- link to main stylesheet -->
+<link rel="stylesheet" href="css/form-gen.css" type="text/css" />
+<!-- link to font awesome icon set -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- link to jquery (same as in original source) -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- Add Fancybox JS-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
 </head>
 <body>
-    <?php require '_form-nav.php'; ?>
+    <nav>  
+        <a class="collapse-toggle" href=""><i class="fa fa-caret-square-o-left"></i><i class="fa fa-caret-square-o-right display-none"></i></a>
+        <h1>Macmillan<br>Digital<br>Marketing<br>Group</h1>
+
+        <ul class="primary-nav">
+            <!-- <li>
+                <a href="#">Google Analytics URL Builder</a>
+            </li>
+            <li>
+                <a class="nav-toggle" href="#"><i class="fa fa-caret-down caret display-none"></i><i class="fa fa-caret-right caret"></i>Google Analytics Event Tracking</a>
+                <ul class="secondary-nav display-none">
+                    <li><a href="#">Universal Tracking (new)</a></li>
+                    <li><a href="#">Standard Tracking (old)</a></li>
+                </ul>
+            </li> -->
+            <li>
+                <a class="nav-toggle" href="form-homepg.html"><i class="fa fa-caret-down display-none caret"></i><i class="fa fa-caret-right caret"></i>Form Generator Tool</a>
+                <ul class="secondary-nav display-none">
+                    <li><a href="form-html.html">HTML Email Opt-In</a></li>
+                    <li><a href="form-fb.html">Facebook</a></li>
+                    <li>
+                        <a class="nav-toggle nav-disabled" href="#"><i class="fa fa-caret-down caret display-none"></i><i class="fa fa-caret-right caret"></i>Promo</a>
+                        <ul class="tertiary-nav display-none">
+                            <li><a href="form-promo.html">Mac.com</a></li>
+                            <li><a href="form-upload.html">Upload</a></li>
+                            <li><a href="form-promo-html.html">HTML</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="form-lookup.html">Form Lookup</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
 
     <form name="form1" method="post" action="#" >
     <div>
@@ -22,7 +71,7 @@
                 <div class="full-width clear-after">
                     <div class="btn-container-formname float-right">
                         <button class="fancybox" rel="group" href="img/email-optin.png">View Sample</button>
-                        <button onclick="window.location='form-html.php'; return false;">Launch</button>
+                        <button onclick="window.location='form-html.html'; return false;">Launch</button>
                     </div>
                 </div>
             </div>
@@ -32,7 +81,7 @@
                 <div class="full-width clear-after">
                     <div class="btn-container-formname float-right">
                         <!-- <button>View Sample</button> -->
-                        <button onclick="window.location='form-fb.php'; return false;">Launch</button>
+                        <button onclick="window.location='form-fb.html'; return false;">Launch</button>
                     </div>
                 </div>
             </div>
@@ -42,7 +91,7 @@
                 <div class="full-width clear-after">
                     <div class="btn-container-formname float-right">
                         <button class="fancybox" rel="group" href="img/mac-sweeps-pg.png">View Sample</button>
-                        <button onclick="window.location='form-promo.php'; return false;">Launch</button>
+                        <button onclick="window.location='form-promo.html'; return false;">Launch</button>
                     </div>
                 </div>
             </div>
@@ -52,7 +101,7 @@
                 <div class="full-width clear-after">
                     <div class="btn-container-formname float-right">
                         <button class="fancybox" rel="group" href="img/mac-upload.png">View Sample</button>
-                        <button onclick="window.location='form-upload.php'; return false;">Launch</button>
+                        <button onclick="window.location='form-upload.html'; return false;">Launch</button>
                     </div>
                 </div>
             </div>
@@ -62,7 +111,7 @@
                 <div class="full-width clear-after">
                     <div class="btn-container-formname float-right">
                         <button class="fancybox" rel="group" href="img/third-party-sweeps.png">View Sample</button>
-                        <button onclick="window.location='form-promo-html.php'; return false;">Launch</button>
+                        <button onclick="window.location='form-promo-html.html'; return false;">Launch</button>
                     </div>
                 </div>
             </div>
@@ -78,7 +127,7 @@
                 <p>Already created a form? Check here to find links to existing forms.</p>
                 <div class="full-width clear-after">
                     <div class="btn-container-formname float-right">
-                        <button onclick="window.location='form-lookup.php'; return false;">Launch</button>
+                        <button onclick="window.location='form-lookup.html'; return false;">Launch</button>
                     </div>
                 </div>
             </section>
@@ -93,6 +142,7 @@
     </div>
 
 </form>
-<?php require '_form-footer.php'; ?>
+<!-- main js file -->
+<script type="text/javascript" src="js/form-main.js"></script>
 </body>
 </html>
